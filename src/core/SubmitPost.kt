@@ -18,7 +18,7 @@ private class SubmitPost: AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
         val currentLanguage = e.getData(CommonDataKeys.PSI_FILE)?.language?.displayName!!.toLowerCase()
         var subreddit = "/r/$currentLanguage"
-        if (currentLanguage.isEmpty()) subreddit = ""
+        if (currentLanguage.isEmpty() || currentLanguage == "plain text") subreddit = ""
         BrowserUtil.browse("https://www.reddit.com$subreddit/submit")
     }
 

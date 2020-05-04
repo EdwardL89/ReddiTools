@@ -1,13 +1,13 @@
 package core
 
 import com.intellij.ide.BrowserUtil
-import com.intellij.notification.NotificationDisplayType
-import com.intellij.notification.NotificationGroup
-import com.intellij.notification.NotificationType
+import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.actionSystem.AnAction
+import com.intellij.notification.NotificationType
+import com.intellij.notification.NotificationGroup
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
-import com.intellij.openapi.editor.Editor
+import com.intellij.notification.NotificationDisplayType
 
 private class SearchTopic: AnAction() {
 
@@ -50,5 +50,4 @@ private class SearchTopic: AnAction() {
                 NotificationType.INFORMATION,
                 null).notify(actionEvent.project)
     }
-
 }
